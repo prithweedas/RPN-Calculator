@@ -70,7 +70,7 @@ export default (state = initialState, { type, payload }) => {
         stack: [0, ...state.stack]
       }
     case BACK_SPACE:
-      if (state.inputState === "append") {
+      if (state.inputState === "append" || state.inputState === "push") {
         const str = state.stack[0]
         const newStr = str.slice(0, str.length - 1)
         return {
